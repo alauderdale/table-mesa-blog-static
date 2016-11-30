@@ -28,9 +28,10 @@
 			@include transition(all 200ms ease);
 	  	position: absolute;
 	  	top:20px;
-	  	left:20px;
+	  	left:90px;
 	  	@include breakpoint(sm) {
 	  		top:0;
+	  		left:-20px;
 	  	}
 	  }
 	  .header-root{

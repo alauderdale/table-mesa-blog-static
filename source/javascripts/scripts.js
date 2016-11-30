@@ -37,20 +37,18 @@ $(document).ready(function(){
         $('#collapse-menu').toggleClass('menu-on'); // hide all shown divs
     });
 
-    //scroll header
-    $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
+    // //scroll header
+    // $(window).scroll(function() {    
+    //     var scroll = $(window).scrollTop();
 
-         //>=, not <=
-        if (scroll >= 500) {
-            //clearHeader, not clearheader - caps H
-            $(".logo-and-breadcrumbs").addClass("scrolled");
-        } else {
-            $(".logo-and-breadcrumbs").removeClass("scrolled");
-        }
-    }); //missing );
-
-
+    //      //>=, not <=
+    //     if (scroll >= 500) {
+    //         //clearHeader, not clearheader - caps H
+    //         $(".logo-and-breadcrumbs").addClass("scrolled");
+    //     } else {
+    //         $(".logo-and-breadcrumbs").removeClass("scrolled");
+    //     }
+    // }); //missing );
 
 
     ( function( $ ) {
@@ -59,12 +57,23 @@ $(document).ready(function(){
             render: function(data) {
                 //Debugging - Log the current scroll position.
                 console.log(data.curTop);
+
+            if (data.curTop >= 500) {
+                //clearHeader, not clearheader - caps H
+                $(".logo-and-breadcrumbs").addClass("scrolled");
+            } else {
+                $(".logo-and-breadcrumbs").removeClass("scrolled");
+            }
+
             }
         });
     } )( jQuery );
 
 
 
+
+
+    // console.log(data.curTop);
 
 });
 
