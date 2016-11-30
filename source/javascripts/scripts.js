@@ -37,6 +37,11 @@ $(document).ready(function(){
     //     classToAdd: 'fadeIn'
     // });
 
+    //menu
+    $('.menu-button').click(function() {
+        $('#collapse-menu').toggleClass('menu-on'); // hide all shown divs
+    });
+
 });
 
 $(document).ready(function () {

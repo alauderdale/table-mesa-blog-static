@@ -10,6 +10,7 @@
   	margin:0;
   }
 	.logo-and-breadcrumbs{
+		z-index: 1;
 	  @include breakpoint(sm) {
 			float: none;
 	    text-align: center;
@@ -26,10 +27,12 @@
 	.main-nav-back{
 		margin-top: -25px;
 		position: relative;
+		z-index: 1;
 			a{
 				color: black;
 				position: relative;
 				top:29px;
+				z-index: 0;
 			}
 		}
 
@@ -103,7 +106,11 @@
   }
   .menu-button{
   	padding-right: 20px;
-  	margin-top: 15px
+  	margin-top: 15px;
+  	z-index: 999999!important;
+  	position: absolute;
+  	top: 0;
+  	right: 0;
   }
   //mobile nav
   .mobile-nav{
@@ -130,6 +137,35 @@
   	}
   }
 }
+
+
+//mobile nav
+
+.mobile-menu{
+	background:white;
+	box-shadow: 0 50px 100px rgba(50,50,93,.1),0 15px 35px rgba(50,50,93,.15),0 5px 15px rgba(0,0,0,.1);
+	border-radius: 4px;
+	margin: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	visibility:hidden;
+	opacity: 0;
+	@include transition-duration(.2s);
+	transform:translate3d(0, 5px, 0);
+	@include transition(all 200ms ease);
+	.mobile-menu-body{
+		padding: 30px 20px 20px 20px;
+	}
+	&.menu-on{
+		visibility: visible;
+		transform:translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+
 
 //menu toggle
 

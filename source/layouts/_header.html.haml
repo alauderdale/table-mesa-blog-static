@@ -1,6 +1,5 @@
 %nav.navbar.navbar-default.navbar-fixed-top.global-nav
 	.container
-
 		.visible-xs.main-nav-back
 			%a{:href=>"/contact"}
 				%i.material-icons
@@ -22,7 +21,12 @@
 						Technology
 			.visible-xs
 				.pull-right
-					%button.tcon.tcon-menu--xcross.menu-button{"aria-label" => "toggle menu", :type => "button", "aria-expanded" => "false", "data-target" => "#collapse-menu", "data-toggle" => "collapse"}
+					.mobile-menu#collapse-menu
+						.mobile-menu-body
+							%p.no-margin
+								= lorem.paragraphs 1
+						.mobile-menu-footer
+					%button.tcon.tcon-menu--xcross.menu-button{"aria-label" => "toggle menu", :type => "button"}
 						%span.tcon-menu__lines{"aria-hidden" => "true"}
 						%span.tcon-visuallyhidden 
 							toggle menu
@@ -57,46 +61,40 @@
 								%i.material-icons
 									search
 
-			/ %form.navbar-form.navbar-right
-			/ 	%a.btn.btn-primary{:href=>"/demo"}
-			/ 		Schedule a Demo
-			/ 	%a.btn.btn-default{:href=>"#"}
-			/ 		Sign In
-	.visible-xs
-		#collapse-menu.collapse.navbar-collapse.mobile-nav.navbar-right
-			%ul.nav.navbar-nav
-				%li
-					%a{:href => "/solution"}
-						Solution
-				%li
-					%a{:href => "/pricing"} 
-						Pricing
-				%li
-					%a{:href => "/contact"} 
-						Contact
-				%li.dropdown
-					%a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
-						•••
-					%ul.dropdown-menu
-						%li
-							%a{:href => "/company"} 
-								Company
-						%li
-							%a{:href => "/security"} 
-								Security
-						%li
-							%a{:href => "/blog"} 
-								Blog
-						%li
-							%a{:href=>"/pricing#faqs"}
-								FAQs
-						%li
-							%a{:href => "/jobs"} 
-								Jobs
-				%li
-					%a.bold-link{:href => "/demo"} 
-						Schedule a Demo
-				%li
-					%a.bold-link{:href => "#"} 
-						Sign In
+		/ #collapse-menu.collapse.navbar-collapse.mobile-nav.navbar-right
+		/ 	%ul.nav.navbar-nav
+		/ 		%li
+		/ 			%a{:href => "/solution"}
+		/ 				Solution
+		/ 		%li
+		/ 			%a{:href => "/pricing"} 
+		/ 				Pricing
+		/ 		%li
+		/ 			%a{:href => "/contact"} 
+		/ 				Contact
+		/ 		%li.dropdown
+		/ 			%a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
+		/ 				•••
+		/ 			%ul.dropdown-menu
+		/ 				%li
+		/ 					%a{:href => "/company"} 
+		/ 						Company
+		/ 				%li
+		/ 					%a{:href => "/security"} 
+		/ 						Security
+		/ 				%li
+		/ 					%a{:href => "/blog"} 
+		/ 						Blog
+		/ 				%li
+		/ 					%a{:href=>"/pricing#faqs"}
+		/ 						FAQs
+		/ 				%li
+		/ 					%a{:href => "/jobs"} 
+		/ 						Jobs
+		/ 		%li
+		/ 			%a.bold-link{:href => "/demo"} 
+		/ 				Schedule a Demo
+		/ 		%li
+		/ 			%a.bold-link{:href => "#"} 
+		/ 				Sign In
 
