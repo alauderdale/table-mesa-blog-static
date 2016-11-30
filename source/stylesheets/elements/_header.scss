@@ -5,10 +5,40 @@
 	border-bottom: none;
 	 // -webkit-filter: blur(12px);
   // filter: blur(12px);
+  .navbar-form{
+  	border:none;
+  	margin:0;
+  }
+	.logo-and-breadcrumbs{
+	  @include breakpoint(sm) {
+			float: none;
+	    text-align: center;
+	    margin: 0 auto;
+	    display: table;
+	    margin-bottom: -60px;
+	    position: relative;
+	    top: -10px;
+	  }
+
+	}
+
+
+	.main-nav-back{
+		margin-top: -25px;
+		position: relative;
+			a{
+				color: black;
+				position: relative;
+				top:29px;
+			}
+		}
+
 	a.navbar-brand{
 		position: relative;
-
 		padding-right: 20px;
+
+
+
 		img{
 			transform-origin: 51px 16px;
 			transition-delay: 0s;
@@ -18,9 +48,6 @@
 			x: 0px;
 			y: 0px;
 		}
-	  @include breakpoint(sm) {
-
-	  }
 	}
 	ul.navbar-nav, ul.dropdown-menu{
 		li{

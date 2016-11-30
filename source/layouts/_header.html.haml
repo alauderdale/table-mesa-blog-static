@@ -1,13 +1,25 @@
 %nav.navbar.navbar-default.navbar-fixed-top.global-nav
 	.container
-		.navbar-header
-			%a.navbar-brand{:href=>"/"}
-				%img{:src=>"images/logo@2x.png", :width=>"148px"}
-			.nav.nav-breadcrumb
+
+		.visible-xs.main-nav-back
+			%a{:href=>"/contact"}
 				%i.material-icons
-					chevron_right
-				%a{:href=>"#"}
-					Technology
+					arrow_back
+
+		.navbar-header
+			.logo-and-breadcrumbs
+
+				%form.navbar-form.hidden
+					%a.btn.btn-primary{:href=>"/demo"}
+						Schedule a Demo
+
+				%a.navbar-brand{:href=>"/"}
+					%img{:src=>"images/logo@2x.png", :width=>"148px"}
+				.nav.nav-breadcrumb.hidden-xs
+					%i.material-icons
+						chevron_right
+					%a{:href=>"#"}
+						Technology
 			.visible-xs
 				.pull-right
 					%button.tcon.tcon-menu--xcross.menu-button{"aria-label" => "toggle menu", :type => "button", "aria-expanded" => "false", "data-target" => "#collapse-menu", "data-toggle" => "collapse"}
@@ -51,7 +63,7 @@
 			/ 	%a.btn.btn-default{:href=>"#"}
 			/ 		Sign In
 	.visible-xs
-		#collapse-menu.collapse.navbar-collapse.mobile-nav
+		#collapse-menu.collapse.navbar-collapse.mobile-nav.navbar-right
 			%ul.nav.navbar-nav
 				%li
 					%a{:href => "/solution"}
