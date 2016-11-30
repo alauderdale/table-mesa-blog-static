@@ -18,8 +18,14 @@ a.post-thumbnail{
 	position: relative;
 	@include transition-duration(.2s);
 
+  margin-left: 2px;
+  margin-right: 2px;
+
+
   @include breakpoint(sm) {
     height: auto!important;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 	&:hover{
@@ -36,7 +42,6 @@ a.post-thumbnail{
 				box-shadow:  none;
 			}
 	  }
-
 	}
 	.post-thumbnail-body{
 		padding: $card-padding;
