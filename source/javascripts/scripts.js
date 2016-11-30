@@ -11,11 +11,6 @@ $(document).ready(function(){
 
 	$('.tooltip-up').tooltip({html:true});
 
-	$( "#js-menu-button-open,#js-menu-button-close" ).click(function() {
-        $( ".main-nav-container" ).toggleClass( "fixed-nav" );
-        $( ".menu-drop" ).toggleClass( "menu-show" );
-        $( "html" ).toggleClass( "nav-open" );
-    });
 
 
     ///all the animations!
@@ -33,36 +28,46 @@ $(document).ready(function(){
     // });
 
 
-    // $('.fadeInOnload').viewportChecker({
-    //     classToAdd: 'fadeIn'
-    // });
+    $('.fadeInOnload').viewportChecker({
+        classToAdd: 'fadeIn'
+    });
 
     //menu
     $('.menu-button').click(function() {
         $('#collapse-menu').toggleClass('menu-on'); // hide all shown divs
     });
 
-});
+    //scroll header
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
 
-$(document).ready(function () {
-
-
-( function( $ ) {
-    // Init Skrollr
-    var s = skrollr.init({
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            console.log(data.curTop);
+         //>=, not <=
+        if (scroll >= 500) {
+            //clearHeader, not clearheader - caps H
+            $(".logo-and-breadcrumbs").addClass("scrolled");
+        } else {
+            $(".logo-and-breadcrumbs").removeClass("scrolled");
         }
-    });
-} )( jQuery );
+    }); //missing );
 
 
 
+
+    ( function( $ ) {
+        // Init Skrollr
+        var s = skrollr.init({
+            render: function(data) {
+                //Debugging - Log the current scroll position.
+                console.log(data.curTop);
+            }
+        });
+    } )( jQuery );
 
 
 
 
 });
+
+
 
 

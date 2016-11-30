@@ -7,18 +7,18 @@
 
 		.navbar-header
 			.logo-and-breadcrumbs
-
-				%form.navbar-form.hidden
-					%a.btn.btn-primary{:href=>"/demo"}
-						Schedule a Demo
-
-				%a.navbar-brand{:href=>"/"}
-					%img{:src=>"images/logo@2x.png", :width=>"148px"}
-				.nav.nav-breadcrumb.hidden-xs
-					%i.material-icons
-						chevron_right
-					%a{:href=>"#"}
-						Technology
+				.header-promo
+					%form.navbar-form
+						%a.btn.btn-primary{:href=>"/demo"}
+							Schedule a Demo
+				.header-root
+					%a.navbar-brand{:href=>"/"}
+						%img{:src=>"images/logo@2x.png", :width=>"148px"}
+					.nav.nav-breadcrumb.hidden-xs
+						%i.material-icons
+							chevron_right
+						%a{:href=>"#"}
+							Technology
 			.visible-xs
 				.pull-right
 					.mobile-menu#collapse-menu
