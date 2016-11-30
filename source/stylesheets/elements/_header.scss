@@ -20,6 +20,31 @@
 	    position: relative;
 	    top: -10px;
 	  }
+
+		//breadcrumbs
+
+		.nav-breadcrumb{
+			float: left;
+			i{
+				position: relative;
+				top:-2px;
+				right:4px;
+				font-size: 14pt;
+				color: #B0B9C0;
+			}
+			a{
+				color:$body-text-color;
+				font-family: $regular-font-name;
+				position: relative;
+				top:-6px;
+				letter-spacing: -.2px;
+				font-size: 1em;
+			}
+			i, a{
+				line-height: 47px;
+			}
+		}
+
 	  .header-promo{
 	  	opacity: 0;
 	  	visibility: hidden;
@@ -28,10 +53,18 @@
 			@include transition(all 200ms ease);
 	  	position: absolute;
 	  	top:20px;
-	  	left:90px;
+	  	left:0px;
+	  	.btn{
+	  		background: white;
+	  		border: 1px solid tint($primary-color, 50%);
+	  		color: $primary-color;
+	  		&:hover{
+	  			border-color:$primary-color;
+	  		}
+	  	}
 	  	@include breakpoint(sm) {
-	  		top:0;
-	  		left:-20px;
+	  		top:8px;
+	  		left:-35px;
 	  	}
 	  }
 	  .header-root{
@@ -44,12 +77,12 @@
 		  .header-promo{
 		  	opacity: 1;
 		  	visibility: visible;
-		  	transform:translate3d(-10px, 0px, 0);
+		  	transform:translate3d(0px, -10px, 0);
 		  }
 		  .header-root{
 		  	opacity: 0;
 		  	visibility: hidden;
-		  	transform:translate3d(10px, 0px, 0);
+		  	transform:translate3d(0px, 10px, 0);
 		  }
 	  }
 	}
@@ -70,17 +103,9 @@
 	a.navbar-brand{
 		position: relative;
 		padding-right: 20px;
-
-
-
-		img{
-			transform-origin: 51px 16px;
-			transition-delay: 0s;
-			transition-duration: 0.3s;
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-			x: 0px;
-			y: 0px;
+		padding-top: 14px;
+		@include breakpoint(sm) {
+			padding-top: 15px;
 		}
 	}
 	ul.navbar-nav, ul.dropdown-menu{
@@ -137,9 +162,9 @@
   }
   .menu-button{
   	padding-right: 20px;
-  	margin-top: 15px;
   	z-index: 999999!important;
   	position: absolute;
+  	margin-top: 2px;
   	top: 0;
   	right: 0;
   	&.tcon-transform{
@@ -160,7 +185,7 @@
 	box-shadow: 0 50px 100px rgba(50,50,93,.1),0 15px 35px rgba(50,50,93,.15),0 5px 15px rgba(0,0,0,.1);
 	border-radius: 4px;
 	position: absolute;
-	top: 5px;
+	top: -5px;
 	right: 10px;
 	left: 10px;
 	z-index: 1;
@@ -355,25 +380,4 @@ $tcon-menu-arrow360left-transformation: (
 	}
 }
 
-//breadcrumbs
 
-.nav-breadcrumb{
-	float: left;
-	i{
-		position: relative;
-		top:2px;
-		right:4px;
-		font-size: 14pt;
-		color: #B0B9C0;
-	}
-	a{
-		color:$body-text-color;
-		font-family: $medium-font-name;
-		position: relative;
-		top:-2px;
-		letter-spacing: -.2px;
-	}
-	i, a{
-		line-height: 47px;
-	}
-}
