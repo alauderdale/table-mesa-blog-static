@@ -1,0 +1,90 @@
+%nav.navbar.navbar-default.navbar-fixed-top.global-nav
+	.container
+		.navbar-header
+			%a.navbar-brand{:href=>"/"}
+				%img{:src=>"images/logo@2x.png", :width=>"148px"}
+			.nav.nav-breadcrumb
+				%i.material-icons
+					chevron_right
+				%a{:href=>"#"}
+					Technology
+			.visible-xs
+				.pull-right
+					%button.tcon.tcon-menu--xcross.menu-button{"aria-label" => "toggle menu", :type => "button", "aria-expanded" => "false", "data-target" => "#collapse-menu", "data-toggle" => "collapse"}
+						%span.tcon-menu__lines{"aria-hidden" => "true"}
+						%span.tcon-visuallyhidden 
+							toggle menu
+		.hidden-xs
+			.desktop-nav
+				.navbar-right
+					%ul.nav.navbar-nav
+						%li.dropdown
+							%a.dropdown-toggle{:href=>"/solution"}
+								Topics
+							%ul.dropdown-menu
+								%li
+									%a{:href=>"/solution"}
+										Technology
+								%li
+									%a{:href=>"/solution/monitoring"}
+										News
+								%li
+									%a{:href=>"/solution/collaborate"}
+										continued CE
+								%li
+									%a{:href=>"/solution/integrate"}
+										General
+								%li
+									%a{:href=>"/solution/manage"}
+										Other
+						%li
+							%a{:href=>"/pricing"}
+								Subscribe
+						%li
+							%a{:href=>"/contact"}
+								%i.material-icons
+									search
+
+			/ %form.navbar-form.navbar-right
+			/ 	%a.btn.btn-primary{:href=>"/demo"}
+			/ 		Schedule a Demo
+			/ 	%a.btn.btn-default{:href=>"#"}
+			/ 		Sign In
+	.visible-xs
+		#collapse-menu.collapse.navbar-collapse.mobile-nav
+			%ul.nav.navbar-nav
+				%li
+					%a{:href => "/solution"}
+						Solution
+				%li
+					%a{:href => "/pricing"} 
+						Pricing
+				%li
+					%a{:href => "/contact"} 
+						Contact
+				%li.dropdown
+					%a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
+						•••
+					%ul.dropdown-menu
+						%li
+							%a{:href => "/company"} 
+								Company
+						%li
+							%a{:href => "/security"} 
+								Security
+						%li
+							%a{:href => "/blog"} 
+								Blog
+						%li
+							%a{:href=>"/pricing#faqs"}
+								FAQs
+						%li
+							%a{:href => "/jobs"} 
+								Jobs
+				%li
+					%a.bold-link{:href => "/demo"} 
+						Schedule a Demo
+				%li
+					%a.bold-link{:href => "#"} 
+						Sign In
+

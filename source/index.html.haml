@@ -1,0 +1,40 @@
+;;;
+"title": "Home"
+;;;
+
+=partial"shared/featured-header"
+
+.topics-bar.centered-menu
+	%ul
+		%li
+			%a{:href=>""}
+				Technology
+		%li
+			%a{:href=>""}
+				News
+		%li
+			%a{:href=>""}
+				Continued CE
+		%li
+			%a{:href=>""}
+				General
+		%li
+			%a{:href=>""}
+				Other
+
+%section
+	.container
+		.row
+			.col-lg-12
+				.row
+					-10.times do
+						.col-md-4.col-sm-6
+							= partial "shared/post-thumb"
+						.col-md-4.col-sm-6
+							= partial "shared/post-thumb"
+						.col-md-4.col-sm-6
+							= partial "shared/post-thumb-image"
+						.col-md-4.col-sm-6
+							= partial "shared/post-thumb"
+						.col-md-4.col-sm-6
+							= partial "shared/post-thumb-image"

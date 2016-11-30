@@ -1,0 +1,122 @@
+//post thumbnail card
+
+$card-line-height: 26px;
+$card-padding: 30px;
+
+// a.post-thumbnail-link{
+// 	&:hover{
+// 		border:1px solid red!important;
+// 	}
+// }
+
+a.post-thumbnail{
+	background: white;
+	display: inline-block;
+	margin-bottom: $baseline;
+	box-shadow: 0 12px 24px 0 rgba(113,202,255,0.06), 0 12px 24px 0 rgba(0,0,0,0.11);
+	height: 430px;
+	position: relative;
+	@include transition-duration(.2s);
+
+  @include breakpoint(sm) {
+    height: auto!important;
+  }
+
+	&:hover{
+
+		box-shadow: 0 12px 24px 0 rgba(113,202,255,0.06), 0 17px 29px 0 rgba(0,0,0,0.11), inset 1px 1px 0 $primary-color, inset -1px -1px 0 $primary-color;
+		margin-top:-4px;
+		margin-bottom: 4px +$baseline;
+		.post-thumbnail-footer{
+			box-shadow:  inset 1px 0px 0 $primary-color, inset -1px -1px 0 $primary-color;
+		}
+	  @include breakpoint(sm) {
+	    box-shadow: 0 12px 24px 0 rgba(113,202,255,0.06), 0 17px 29px 0 rgba(0,0,0,0.11);
+	  }
+
+	}
+	.post-thumbnail-body{
+		padding: $card-padding;
+		padding-top: 40px;
+		h3{
+			color: $text-color;
+		}
+	}
+
+	.post-thumbnail-footer{
+		@include transition-duration(.2s);
+		padding:$card-padding;
+		background-color: $light-gray-color;
+		display: inline-block;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		h5, a{
+			color:$light-text-color;
+		}
+		h5{
+			margin:0;
+			font-family: $regular-font-name;
+			letter-spacing: .7px;
+		}
+	}
+
+	h3, p{
+		line-height: $card-line-height;
+	}
+	h3{
+		margin: 0;
+		margin-bottom: $card-line-height;
+		font-size: 19px;
+		font-family: $medium-font-name;
+		letter-spacing: -.3px;
+	}
+	p{
+		margin: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 185px;
+		&.has-image{
+			margin-bottom: $card-line-height/4;
+			height: 85px;
+		}
+	  @include breakpoint(sm) {
+	    height: auto!important;
+	    margin-bottom:$baseline*2.5;
+	    &.has-image{
+	    	margin-bottom: $card-line-height/2;
+	    }
+	  }
+	}
+	.img-clip{
+		img{
+			width: 100%;
+			@include breakpoint(sm) {
+				padding-bottom:$baseline*2.5;
+			}
+		}
+	}
+}
+
+
+//classes specific to the blog post
+
+.post-header-section{
+	padding-top: $baseline*4;
+	padding-bottom: $baseline*4;
+
+  @include breakpoint(sm) {
+		padding-top: $baseline;
+		padding-bottom: $baseline;
+  }
+
+}
+
+
+.post{
+	background: white;
+	img{
+		max-width:100%;
+		margin: 10px 0;
+	}
+}

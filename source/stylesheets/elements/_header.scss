@@ -1,0 +1,252 @@
+.global-nav{
+	background-color:rgba(255,255,255,.98);
+	padding:10px 0 9px 0;
+	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.08);
+	border-bottom: none;
+	 // -webkit-filter: blur(12px);
+  // filter: blur(12px);
+	a.navbar-brand{
+		position: relative;
+
+		padding-right: 20px;
+		img{
+			transform-origin: 51px 16px;
+			transition-delay: 0s;
+			transition-duration: 0.3s;
+			transition-property: all;
+			transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			x: 0px;
+			y: 0px;
+		}
+	  @include breakpoint(sm) {
+
+	  }
+	}
+	ul.navbar-nav, ul.dropdown-menu{
+		li{
+			margin: 0;
+			font-size: 1.4rem;
+			font-family: $regular-font-name;
+			a{
+				padding-top: 14px;
+    		padding-bottom: 8px;
+				padding-right:24px;
+				padding-left:25px;
+				color:$text-color!important;
+				@include transition-duration(.1s);
+			  &:hover{
+					color:$primary-color!important;
+					background:none;
+				}
+			}
+		}
+	}
+	//desktop nav
+	.desktop-nav{
+		ul.dropdown-menu{
+			border-color:#e7e7e7;
+			li{
+				a{
+					padding-top:10px!important;
+					padding-bottom:10px!important;	
+					// color:$primary-color!important;	
+				}
+			}
+		}
+		.dropdown .dropdown-menu{
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+			transform:translate3d(0, 0, 0);
+			@include transition(all 200ms ease);
+		}
+		.dropdown:hover .dropdown-menu {
+		display: block;
+		transform:translate3d(0, -5px, 0);
+		opacity: 1;
+		visibility: visible;
+    	margin-top: 0; // remove the gap so it doesn't close
+    }
+  }
+  .btn-default{
+  	border:none;
+  	&:hover,&:active,&:focus{
+  		border:none;
+  	}
+  }
+  .menu-button{
+  	padding-right: 20px;
+  	margin-top: 15px
+  }
+  //mobile nav
+  .mobile-nav{
+  	border:none;
+  	max-height:100%;
+  	ul{
+  		li{
+  			font-family: $regular-font-name;
+  			font-size: 1.4rem;
+  			&.open{
+  				a.dropdown-toggle{
+  					display: none;
+  				}
+  			}
+  			a{
+  				padding-top:8px!important;
+  				padding-bottom:8px!important;
+  				&.bold-link{
+  					font-family: $bold-font-name;
+  					color:$primary-color!important;
+  				}
+  			}
+  		}
+  	}
+  }
+}
+
+//menu toggle
+
+$tcon-size: 24px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-menu-radius: ($tcon-size / 14) !default;
+$tcon-menu-color: black !default;
+$tcon-menu-arrowleft-transformation: (
+
+	) !default;
+$tcon-menu-arrow360left-transformation: (
+
+	) !default;
+.tcon {
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $tcon-size;
+	transition: $tcon-transition;
+	user-select: none;
+	width: $tcon-size;
+	background: transparent;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+
+	> * {
+		display: block;
+	}
+
+	&:hover,
+	&:focus {
+    outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
+  }
+  &::-moz-focus-inner {
+  	border: 0;
+  }
+}
+
+@mixin tcon-menu-lines {
+	display: inline-block;
+	height: ($tcon-size / 14);
+	width: $tcon-size;
+	border-radius: $tcon-menu-radius;
+	transition: $tcon-transition;
+	background: $tcon-menu-color;
+}
+
+.tcon-menu__lines {
+	@include tcon-menu-lines;
+	position: relative;
+
+	&::before,
+	&::after {
+		@include tcon-menu-lines;
+		content: '';
+		position: absolute;
+		left: 0;
+		transform-origin: ($tcon-size / 14) center;
+		width: 100%;
+	}
+
+	&::before {
+		top: ($tcon-size / 4);
+	}
+
+	&::after {
+		top: -($tcon-size / 4);
+	}
+
+	.#{$tcon-jstransform} & {
+		transform: scale3d(.8, .8, .8);
+	}
+}
+.tcon-menu--xcross {
+	width: auto;
+
+	&.#{$tcon-jstransform} {
+		.tcon-menu__lines {
+			background: transparent;
+
+			&::before,
+			&::after {
+				transform-origin: 50% 50%;
+				top: 0;
+				width: $tcon-size;
+			}
+
+			&::before {
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+
+			&::after {
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+		}
+	}
+}
+// see issue #7 https://github.com/grayghostvisuals/transformicons/issues/7#issuecomment-59813596
+.tcon-visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&:active,
+	&:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+//breadcrumbs
+
+.nav-breadcrumb{
+	float: left;
+	i{
+		position: relative;
+		top:2px;
+		right:4px;
+		font-size: 14pt;
+		color: #B0B9C0;
+	}
+	a{
+		color:$body-text-color;
+		font-family: $medium-font-name;
+		position: relative;
+		top:-2px;
+		letter-spacing: -.2px;
+	}
+	i, a{
+		line-height: 47px;
+	}
+}
