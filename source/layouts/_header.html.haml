@@ -22,10 +22,45 @@
 			.visible-xs
 				.pull-right
 					.mobile-menu#collapse-menu
-						.mobile-menu-body
-							%p.no-margin
-								= lorem.paragraphs 1
+						.mobile-menu-body.quarter-padding-bottom
+							%ul.mobile-menu-links
+								%li
+									%a{:href=>"/contact"}
+										%i.material-icons
+											home
+										Home
+								%li
+									%a{:href=>"/contact"}
+										%i.material-icons
+											search
+										Search
+								%li
+									%a{:href=>"/contact"}
+										%i.material-icons
+											mail_outline
+										Subscribe
+						.mobile-menu-body.quarter-padding-top.quarter-padding-bottom
+							%h5
+								Topics
+							%ul.list-unstyled.topics-list
+								%li
+									%a{:href=>"#"}
+										Technology
+								%li
+									%a{:href=>"#"}
+										News
+								%li
+									%a{:href=>"#"}
+										Continued CE
+								%li
+									%a{:href=>"#"}
+										General
+								%li
+									%a{:href=>"#"}
+										Other
 						.mobile-menu-footer
+							%a.btn.btn-primary.btn-block{:href=>"#"}
+								Learn more about Table Mesa
 					%button.tcon.tcon-menu--xcross.menu-button{"aria-label" => "toggle menu", :type => "button"}
 						%span.tcon-menu__lines{"aria-hidden" => "true"}
 						%span.tcon-visuallyhidden 
