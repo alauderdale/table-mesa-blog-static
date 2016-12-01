@@ -23,17 +23,24 @@
 				.pull-right
 					.mobile-menu#collapse-menu
 						.mobile-menu-body.quarter-padding-bottom
+							%form
+								.form-group
+									.input-group.add-on
+										.input-group-addon
+											%i.material-icons
+												search
+										%input.form-control.navbar-search-form{:placeholder => "search the blog"}
 							%ul.mobile-menu-links
 								%li
 									%a{:href=>"/contact"}
 										%i.material-icons
 											home
 										Home
-								%li
-									%a{:href=>"/contact"}
-										%i.material-icons
-											search
-										Search
+								/ %li
+								/ 	%a{:href=>"/contact"}
+								/ 		%i.material-icons
+								/ 			search
+								/ 		Search
 								%li
 									%a{:href=>"/contact"}
 										%i.material-icons
@@ -92,9 +99,12 @@
 							%a{:href=>"/pricing"}
 								Subscribe
 						%li
-							%a{:href=>"/contact"}
+							%a.pull-left.search-toggle{:href=>"#", "onclick" => "return false;"}
 								%i.material-icons
 									search
+							%form.navbar-form.pull-left.navbar-search
+								.form-group
+									%input.form-control.navbar-search-form{:placeholder => "search the blog"}
 
 		/ #collapse-menu.collapse.navbar-collapse.mobile-nav.navbar-right
 		/ 	%ul.nav.navbar-nav

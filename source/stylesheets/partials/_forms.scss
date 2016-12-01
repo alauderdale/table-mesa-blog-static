@@ -15,3 +15,25 @@ label{
 		box-shadow:none;
 	}
 }
+
+.add-on{
+	input{
+		border-left:none;
+		&:focus{
+			border-color:#ccc;
+		}
+
+	}
+}
+
+.input-group-addon{
+	background: none;
+	border-right:none;
+	padding-right: 0;
+	// border-color:$primary-color;
+	i{
+		font-size: 15px;
+		position: relative;
+		top:2px;
+	}
+}
