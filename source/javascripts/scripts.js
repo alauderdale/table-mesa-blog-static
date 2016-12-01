@@ -71,7 +71,7 @@ $(document).ready(function(){
             render: function(data) {
                 //Debugging - Log the current scroll position.
                 console.log(data.curTop);
-
+                forceHeight: false
             if (data.curTop >= 500) {
                 //clearHeader, not clearheader - caps H
                 $(".logo-and-breadcrumbs").addClass("scrolled");
@@ -81,6 +81,7 @@ $(document).ready(function(){
 
             }
         });
+        skrollr.menu.init(s);
     } )( jQuery );
 
 
