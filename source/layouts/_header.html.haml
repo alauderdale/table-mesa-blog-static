@@ -17,7 +17,7 @@
 					.nav.nav-breadcrumb.hidden-xs
 						%i.material-icons
 							chevron_right
-						%a{:href=>"#"}
+						%a{:href=>"/topic"}
 							Technology
 			.visible-xs
 				.pull-right
@@ -32,12 +32,12 @@
 										%input.form-control.navbar-search-form{:placeholder => "search the blog"}
 							%ul.mobile-menu-links
 								%li
-									%a{:href=>"/contact"}
+									%a{:href=>"/"}
 										%i.material-icons
 											home
 										Home
 								%li
-									%a{:href=>"/contact"}
+									%a{:href=>"#"}
 										%i.material-icons
 											mail_outline
 										Subscribe
@@ -46,19 +46,19 @@
 								Topics
 							%ul.list-unstyled.topics-list
 								%li
-									%a{:href=>"#"}
+									%a{:href=>"/topic"}
 										Technology
 								%li
-									%a{:href=>"#"}
+									%a{:href=>"/topic"}
 										News
 								%li
-									%a{:href=>"#"}
+									%a{:href=>"/topic"}
 										Continued CE
 								%li
-									%a{:href=>"#"}
+									%a{:href=>"/topic"}
 										General
 								%li
-									%a{:href=>"#"}
+									%a{:href=>"/topic"}
 										Other
 						.mobile-menu-footer
 							%a.btn.btn-primary.btn-block{:href=>"#"}
@@ -72,26 +72,26 @@
 				.navbar-right
 					%ul.nav.navbar-nav
 						%li.dropdown
-							%a.dropdown-toggle{:href=>"/solution"}
+							%a.dropdown-toggle{:href=>"#", "onclick" => "return false;"}
 								Topics
 							%ul.dropdown-menu
 								%li
-									%a{:href=>"/solution"}
+									%a{:href=>"/topic"}
 										Technology
 								%li
-									%a{:href=>"/solution/monitoring"}
+									%a{:href=>"/topic"}
 										News
 								%li
-									%a{:href=>"/solution/collaborate"}
+									%a{:href=>"/topic"}
 										continued CE
 								%li
-									%a{:href=>"/solution/integrate"}
+									%a{:href=>"/topic"}
 										General
 								%li
-									%a{:href=>"/solution/manage"}
+									%a{:href=>"/topic"}
 										Other
 						%li
-							%a{:href=>"/pricing"}
+							%a{:href=>"#"}
 								Subscribe
 						%li
 							%a.pull-left.search-toggle{:href=>"#", "onclick" => "return false;"}

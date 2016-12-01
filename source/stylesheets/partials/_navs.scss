@@ -27,17 +27,21 @@ ul.pager{
 	width:100%;
 	box-shadow: 0 2px 14px 0 rgba(0,0,0,0.08);
 	position: relative;
-	// top:-40px;
+	top:-1px;
 	// margin-bottom: -40px;
 	padding: 14px 0 5px 0;
 	ul{
+		padding: 0 10px;
+		width: 100%;
 		li{
+			@include breakpoint(sm) {
+				line-height: 30px;
+			}
 			margin: 0 10px;
 			&.active{
 				font-family: $medium-font-name;
 				a{
 					color: black;
-
 				}
 			}
 			a{

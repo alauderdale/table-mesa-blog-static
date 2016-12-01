@@ -11,8 +11,6 @@ $(document).ready(function(){
 
 	$('.tooltip-up').tooltip({html:true});
 
-
-
     ///all the animations!
 
     // $('.slideinleftonload').viewportChecker({
@@ -66,7 +64,7 @@ $(document).ready(function(){
 
 
     ( function( $ ) {
-        // Init Skrollr
+
 
 
 
@@ -80,6 +78,8 @@ $(document).ready(function(){
                     images_loaded++;
                     if (images_loaded >= total_images) {
                         // now all images are loaded.
+                        $('.bcg').addClass('loaded');
+                        // Init Skrollr
                     var s = skrollr.init({
                         render: function(data) {
                             //Debugging - Log the current scroll position.

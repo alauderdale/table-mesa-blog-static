@@ -60,7 +60,8 @@ section{
 #featured-post-hero{
   height: 501px;
   @extend %white_text;
-  background: $primary-color;
+  background: black url(../images/loader.gif) center center no-repeat;
+  background-size:30px;
   a.btn-wire{
     text-transform: uppercase;
     letter-spacing: .7px;
@@ -103,7 +104,12 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity:0;
+    @include transition(opacity .25s);
 
+    &.loaded{
+      opacity: 1;
+    }
     @include breakpoint(sm) {
       background-size: auto;
     }

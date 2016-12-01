@@ -1,6 +1,25 @@
+.featured-post-wrap
+	%section#featured-post-hero.homeSlide.no-padding
+		.bcg{"data-anchor-target" => "#featured-post-hero", "data-center" => "background-position: 50% 0px;", "data-top-bottom" => "background-position: 50% -100px; ", :style=>"background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/tmp/bg.png)"}
+			.hsContainer
+				.hsContent{"data--250-top" => "opacity: 0; top:40%;", "data-anchor-target" => "#featured-post-hero h5", "data--100-center" => "opacity: 1; top:0%;"}
+					.row
+						.col-sm-2
+						.col-sm-8
+							%h5.half-margin-bottom.text-center
+								Technology
+							%h1.text-center.medium-font-name.no-margin-top.half.margin-bottom
+								%a{:href=>"single"}
+									I’m a fantastic article with a really long title
+
+							%p.text-center
+								By Table Mesa on Jan 1 2017
+						.col-sm-2
+
+
+
 
 .post
-	=partial"shared/featured-header"
 	%section
 		.container
 			.row
