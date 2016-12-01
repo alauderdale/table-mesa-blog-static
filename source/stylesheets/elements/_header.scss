@@ -121,7 +121,7 @@
 		position: relative;
 		z-index: 1;
 			a{
-				color: black;
+				color: $body-text-color;
 				position: relative;
 				top:29px;
 				z-index: 0;
@@ -200,6 +200,12 @@
   	margin-top: 2px;
   	top: 0;
   	right: 0;
+  	.tcon-menu__lines{
+	  	background: $body-text-color;
+			&:before, &:after{
+				background: $body-text-color;
+			}
+		}
   	&.tcon-transform{
   		.tcon-menu__lines{
   			&:before, &:after{
