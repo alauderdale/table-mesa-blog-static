@@ -80,7 +80,6 @@ $(document).ready(function(){
                     images_loaded++;
                     if (images_loaded >= total_images) {
                         // now all images are loaded.
-
                     var s = skrollr.init({
                         render: function(data) {
                             //Debugging - Log the current scroll position.

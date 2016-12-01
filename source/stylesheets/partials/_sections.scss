@@ -24,6 +24,7 @@ section{
     }
   }
   &.default-page-header{
+    border-bottom:1px solid $divider-color;
     background-size: cover;
     background: #FDFFFF url("../images/default_header_bg.png");
     h2{
