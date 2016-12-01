@@ -33,6 +33,13 @@ ul.pager{
 	ul{
 		li{
 			margin: 0 10px;
+			&.active{
+				font-family: $medium-font-name;
+				a{
+					color: black;
+
+				}
+			}
 			a{
 				font-size: .8em;
 				color: shade($light-text-color, 50%);

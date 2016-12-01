@@ -23,6 +23,14 @@ section{
       border-color:white;
     }
   }
+  &.default-page-header{
+    background-size: cover;
+    background: #FDFFFF url("../images/default_header_bg.png");
+    h2{
+      font-family: $bold-font-name;
+      margin: 0;
+    }
+  }
 }
 
 .off-white-section-group{
@@ -51,7 +59,7 @@ section{
 #featured-post-hero{
   height: 501px;
   @extend %white_text;
-  background: red;
+  background: $primary-color;
   a.btn-wire{
     text-transform: uppercase;
     letter-spacing: .7px;
