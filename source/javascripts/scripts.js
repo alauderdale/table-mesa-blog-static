@@ -67,21 +67,41 @@ $(document).ready(function(){
 
     ( function( $ ) {
         // Init Skrollr
-        var s = skrollr.init({
-            render: function(data) {
-                //Debugging - Log the current scroll position.
-                console.log(data.curTop);
-                forceHeight: false
-            if (data.curTop >= 500) {
-                //clearHeader, not clearheader - caps H
-                $(".logo-and-breadcrumbs").addClass("scrolled");
-            } else {
-                $(".logo-and-breadcrumbs").removeClass("scrolled");
-            }
 
-            }
-        });
-        skrollr.menu.init(s);
+
+
+        // Wait till all images are loaded before initiating the scrollr
+        var total_images = $("body img").length;
+        var images_loaded = 0;
+        $(document).ready(function(e) { 
+                $("body").find('img').each(function() {
+                var fakeSrc = $(this).attr('src');
+                $("<img>").attr("src", fakeSrc).load(function() {
+                    images_loaded++;
+                    if (images_loaded >= total_images) {
+                        // now all images are loaded.
+
+                    var s = skrollr.init({
+                        render: function(data) {
+                            //Debugging - Log the current scroll position.
+                            console.log(data.curTop);
+                        if (data.curTop >= 500) {
+                            //clearHeader, not clearheader - caps H
+                            $(".logo-and-breadcrumbs").addClass("scrolled");
+                        } else {
+                            $(".logo-and-breadcrumbs").removeClass("scrolled");
+                        }
+
+                        }
+                    });
+
+
+          
+                    }
+                }); 
+            });
+        });   
+
     } )( jQuery );
 
 

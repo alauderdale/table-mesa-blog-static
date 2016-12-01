@@ -6,7 +6,7 @@
   input {
     font-size: 16px!important;
   }
- 
+
   select:focus,
   textarea:focus,
   input:focus {
@@ -37,17 +37,6 @@ input{
 	}
 }
 
-.add-on{
-	input{
-
-		border-left:none;
-		box-shadow: none!important;
-		&:focus{
-			border-color:#ccc;
-		}
-
-	}
-}
 
 .input-group-addon{
 	background: none;

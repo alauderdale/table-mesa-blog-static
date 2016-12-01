@@ -29,7 +29,8 @@
 		.form-group{
 			input.form-control{
 				border:none;
-				width: 135px;
+				width: 145px;
+				font-size: 14px!important;
 			}
 		}
 	}
@@ -129,19 +130,20 @@
 	a.navbar-brand{
 		position: relative;
 		padding-right: 20px;
-		padding-top: 14px;
+		padding-top: 13px;
 		@include breakpoint(sm) {
-			padding-top: 15px;
+			padding-top: 17px;
 		}
 	}
 
 
 
 	ul.navbar-nav, ul.dropdown-menu{
+		left: 0;
 		li{
 			margin: 0;
 			font-size: 1.4rem;
-			font-family: $regular-font-name;
+			// font-family: $light-font-name;
 			a{
 				padding-top: 14px;
     		padding-bottom: 8px;
@@ -162,6 +164,7 @@
 			border-color:#e7e7e7;
 			li{
 				a{
+					font-family: $light-font-name;
 					padding-top:10px!important;
 					padding-bottom:10px!important;	
 					// color:$primary-color!important;	
@@ -224,7 +227,7 @@
 	transform:translate3d(0, 5px, 0);
 	@include transition(all 200ms ease);
 	.mobile-menu-footer{
-		padding: 20px 20px 20px 30px;
+		padding: 20px;
 		background-color: $light-gray-color;
 		.btn{
 			padding: 12px;
@@ -263,6 +266,19 @@
 				}
 			}
 		}
+		.mobile-menu-search{
+			position: relative;
+			right:12px;
+			input{
+				width: 106%;
+				border-left:none;
+				box-shadow: none!important;
+				&:focus{
+					border-color:#ccc;
+				}
+		}
+
+		}
 		ul.topics-list{
 			margin: 0;
 			padding: 0;
@@ -271,7 +287,7 @@
 				margin: 0;
 				margin-bottom: 12px;
 				a{
-
+					display: block;
 				}
 			}
 		}
