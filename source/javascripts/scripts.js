@@ -49,18 +49,18 @@ $(document).ready(function(){
         }
     });
 
-    // //scroll header
-    // $(window).scroll(function() {    
-    //     var scroll = $(window).scrollTop();
-
-    //      //>=, not <=
-    //     if (scroll >= 500) {
-    //         //clearHeader, not clearheader - caps H
-    //         $(".logo-and-breadcrumbs").addClass("scrolled");
-    //     } else {
-    //         $(".logo-and-breadcrumbs").removeClass("scrolled");
-    //     }
-    // }); //missing );
+    //modal
+    $(function() {
+        $('.modal-btn').on('click', function( e ) {
+            Custombox.open({
+                target: '#modal',
+                effect: 'sign',
+                overlaySpeed: 200,
+                speed: 300
+            });
+            e.preventDefault();
+        });
+    });
 
 
     ( function( $ ) {

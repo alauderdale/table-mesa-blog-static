@@ -1,1 +1,54 @@
+.modal-open{
+	padding-right: 0!important;
+}
 
+.modal-backdrop {
+   background-color: shade($primary-color,90%);
+}
+
+.modal-backdrop.in {
+    opacity: 0.9;
+}
+
+
+.modal-header{
+	border-bottom:none;
+	padding-bottom: 0;
+	.close{
+		font-size: 34px;
+		color:$body-text-color;
+		opacity: .6;
+		position: relative;
+		right:10px;
+	}
+}
+
+.modal-body{
+	padding-top: 0;
+}
+
+//subscribe modal
+
+.subscribe-modal{
+	form.subscribe{
+		width: 350px;
+		margin: 0 auto;
+	}
+	@include breakpoint(sm) {
+		form.subscribe{
+			width: auto;
+		}
+	}
+}
+
+///custombox
+
+.custombox-modal-container{
+	margin-top: 90px!important;
+}
+
+
+.custombox-open, .custombox-open body{
+	padding-right: 0!important;
+	overflow: visible;
+}

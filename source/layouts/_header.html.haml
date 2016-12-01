@@ -37,7 +37,7 @@
 											home
 										Home
 								%li
-									%a{:href=>"#"}
+									%a.modal-btn{:href=>"#", "onclick" => "return false;"}
 										%i.material-icons
 											mail_outline
 										Subscribe
@@ -91,7 +91,7 @@
 									%a{:href=>"/topic"}
 										Other
 						%li
-							%a{:href=>"#"}
+							%a.modal-btn{:href=>"#", "onclick" => "return false;"}
 								Subscribe
 						%li
 							%a.pull-left.search-toggle{:href=>"#", "onclick" => "return false;"}
