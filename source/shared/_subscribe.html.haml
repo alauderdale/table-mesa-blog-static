@@ -1,17 +1,22 @@
-#modal.bd-example-modal-sm.subscribe-modal
-	.modal-dialog
-		.modal-content
-			.modal-header
-				%button.close{"aria-label" => "Close", "onClick" => "Custombox.close()", :type => "button"}
-					%span{"aria-hidden" => "true"} ×
-			.modal-body
-				.padded.no-padding-top
-					.text-center
-						%h2.no-margin-top
-							Stay up to date!
-						%p
-							Sign up for our newsletter, and we'll send you news and tutorials on web design, coding, business, and more!
-						%form.subscribe
-							%input.form-control.half-margin-bottom{:placeholder=>"Email Address"}
-							%button.btn.btn-primary.form-control{:type=>"submit"}
-								Subscribe
+.container
+	#modal.subscribe-modal
+		.modal-dialog
+			.modal-content
+				.modal-header
+					%button.close{"aria-label" => "Close", "onClick" => "Custombox.close()", :type => "button"}
+						%span{"aria-hidden" => "true"} ×
+				.modal-body
+					.padded.no-padding-top
+						.text-center
+							%h3.no-margin-top
+								Stay up to date!
+							%p
+								Sign up for our newsletter. we'll send you the latest from Table Mesa!
+							%form.subscribe
+								%input.form-control.half-margin-bottom{:placeholder=>"Email Address"}
+								%button.btn.btn-primary.form-control{:type=>"submit"}
+									Subscribe
+							%p.no-margin-bottom
+								%small.light-text-color
+									We’ll only send you awesome posts. Never spam.
+

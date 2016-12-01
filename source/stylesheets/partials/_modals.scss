@@ -29,10 +29,47 @@
 
 //subscribe modal
 
+
 .subscribe-modal{
+	display: none;
+	button{
+		&:focus{
+			outline:none;
+		}
+	}
+	h3{
+		margin-bottom: $baseline/2;
+		color:shade($primary-color, 50%);
+		font-family: $light-font-name;
+	}
+	p{
+		margin-top: 0;
+		font-size: 1em;
+		line-height: 1.8em;
+	}
+	.modal-dialog{
+		max-width: 420px;
+		border:none;
+		margin:0 auto;
+	}
 	form.subscribe{
-		width: 350px;
+		width: 310px;
 		margin: 0 auto;
+		input{
+			padding: 24px $baseline/2;
+		}
+		.btn{
+			margin-bottom: $baseline/2;
+			&.btn-primary{
+				padding: 24px 0;
+				background: $secondary-color;
+				text-transform: uppercase;
+				letter-spacing: .9px;
+				line-height: 0;
+				font-size: 1em;
+				font-family: 'brandon_grotesquebold';
+			}
+		}
 	}
 	@include breakpoint(sm) {
 		form.subscribe{
@@ -44,7 +81,7 @@
 ///custombox
 
 .custombox-modal-container{
-	margin-top: 90px!important;
+	margin-top: 40px!important;
 }
 
 
