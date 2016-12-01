@@ -1,8 +1,29 @@
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  select,
+  textarea,
+  input {
+    font-size: 16px!important;
+  }
+ 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px!important;
+  }
+}
+
+
 label{
 	font-size:1.3rem;
 	font-family:$light-font-name;
 	color:$text-color;
 	margin-bottom:10px;
+}
+
+input{
+	-webkit-appearance: none;
 }
 
 .input-lg{
@@ -18,7 +39,9 @@ label{
 
 .add-on{
 	input{
+
 		border-left:none;
+		box-shadow: none!important;
 		&:focus{
 			border-color:#ccc;
 		}
